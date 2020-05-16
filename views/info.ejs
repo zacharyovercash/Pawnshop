@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+  <body>
+    <% include partials/header.ejs %>
+    <div class="container text-center">
+      <h2>Ticket Number <%= qs.ID %></h2>
+    </div>
+    <table id="info">
+      <tr>
+        <td>Item</td>
+        <td>Quanity</td>
+        <td>Cost Per Item</td>
+      </tr>
+        <% var total=0;
+        for(var i=0;i<items.length;i++){
+         if(items[i].TicketID==qs.ID){ %>
+      <tr>
+          <td><%= items[i].Item %></td>
+          <td><%= items[i].Quanity %></td>
+          <td>$<%= items[i].CostPer%></td>
+      </tr>
+          <% total= total+items[i].CostPer; }
+     } %>
+    </table>
+
+    <div id="total" style="text-align:center">
+    <p>Total:$<%=total%></p>
+  </div>
+  <a id="Payment" style= href="">Make a Payment</a>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

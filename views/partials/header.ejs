@@ -1,0 +1,29 @@
+<div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+    <div class="container">
+        <h1 class="display-1">Coastal Pawn Shop</h1>
+    </div>
+    <nav class="navbar navbar-toggleable-md bg-info navbar-inverse">
+        <div class="container-fluid text-center">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link lead" href="/index">Home</a>
+                    <a class="nav-item nav-link lead" href="/profile">Profile</a>
+                    <% if (user) { %>
+                    <li><a class="nav-item nav-link lead" href="/auth/logout">Logout</a></li>
+                    <% } else { %>
+                    <li><a class="nav-item nav-link lead" href="/auth/login">Login</a></li>
+                    <% } %>
+                </div>
+                <form class="navbar-form form-inline justify-content-end " action="/index" method="POST">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="TicketID" name="ID">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
