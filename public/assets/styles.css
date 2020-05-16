@@ -1,0 +1,85 @@
+
+footer{
+  position:relative;
+  bottom:0px;
+  width: 100%;
+  font-size: 10px;
+  height: 10%;
+  display: block;
+  text-align:center;
+}
+button{
+cursor: pointer;
+width:auto;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+  height: auto;
+}
+td,th{
+  border:1px solid black;
+  text-align:left;
+  padding:8px;
+}
+
+.google-btn{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+    background: #ff5353;
+}
+.form-group{
+  padding:16px;
+}
+#items, {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#items td, #items th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#items  tr:nth-child(even){background-color: #f2f2f2;}
+
+#items  tr:hover {background-color: #ddd;}
+
+#items  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+
+
+#info, {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#info td, #info th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#info  tr:nth-child(even){background-color: #f2f2f2;}
+
+#info tr:hover {background-color: #ddd;}
+
+#info  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
